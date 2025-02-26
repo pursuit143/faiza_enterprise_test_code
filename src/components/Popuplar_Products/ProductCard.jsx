@@ -45,7 +45,7 @@ const ProductCard = ({ tag }) => {
             <span>&#8377;</span>37.00
           </h4>
         </div>
-        <button className="py-2 px-3 bg-emerald-200 text-green-900 font-bold rounded-lg text-xs hover:bg-emerald-400 transition cursor-pointer max-sm:text-[.6rem] max-sm:mt-5">
+        <button className="py-2 px-3 bg-emerald-200 text-green-900 font-bold rounded-lg text-[.6rem] hover:bg-emerald-400 transition cursor-pointer max-sm:text-[.6rem] max-sm:mt-5">
           Add to Cart
         </button>
       </div>

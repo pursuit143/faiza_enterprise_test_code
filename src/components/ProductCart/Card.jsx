@@ -8,7 +8,7 @@ const Card = ({ image_Url, title }) => {
         alt={`image_For_${title}`}
         className="w-[80%] mx-auto"
       />
-      <h2 className="mt-4 text-xs font-semibold tracking-wider text-gray-700 max-sm:text-[.55rem]">
+      <h2 className="mt-4 text-[.65rem] font-semibold tracking-wider text-gray-700 max-sm:text-[.55rem]">
         {title}
       </h2>
     </div>

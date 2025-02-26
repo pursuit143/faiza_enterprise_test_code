@@ -12,10 +12,10 @@ const NewsLetter = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-tight text-white">
+            <h2 className="text-2xl sm:text-3xl lg:text-3xl font-semibold tracking-tight text-white">
               Subscribe to Our Fresh Updates
             </h2>
-            <p className="mt-4 text-sm sm:text-base lg:text-lg text-gray-300">
+            <p className="mt-4 text-sm sm:text-base lg:text-md text-gray-300">
               Stay updated with the latest in grocery, dairy products, and cold beverages. Get exclusive offers, new arrivals, and seasonal deals delivered straight to your inbox!
             </p>
             <form onSubmit={handleSubmit} className="mt-6 flex max-w-md gap-x-4">

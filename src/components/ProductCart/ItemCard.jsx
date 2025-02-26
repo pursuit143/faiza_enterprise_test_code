@@ -7,6 +7,7 @@ import {
   IoIosArrowDroprightCircle,
   IoIosArrowDropleftCircle,
 } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const ProductCarousel = (props) => {
   const CustomNextArrow = ({ onClick }) => (
@@ -121,7 +122,7 @@ const ProductCarousel = (props) => {
             key={product.id}
             className="flex justify-center"
             >
-            <Card image_Url={product.imageUrl} title={product.name} />
+            <Link to={`c/${product.name}`}><Card image_Url={product.imageUrl} title={product.name} /></Link>
           </div>
         ))}
       </Slider>
