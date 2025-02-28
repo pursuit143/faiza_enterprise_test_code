@@ -51,7 +51,7 @@ const ProductCarousel = (props) => {
         breakpoint: 600,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           initialSlide: 0
         }
       },
@@ -59,7 +59,7 @@ const ProductCarousel = (props) => {
         breakpoint: 480,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           initialSlide: 0,
         }
       }

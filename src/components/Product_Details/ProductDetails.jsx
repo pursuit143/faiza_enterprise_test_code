@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ProductImage from "./ProductImage";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdOutlineShoppingBasket } from "react-icons/md";
 import { FaBookmark } from "react-icons/fa6";
 import { FaShippingFast } from "react-icons/fa";
@@ -50,6 +50,7 @@ const ProductDetails = () => {
     },
   ];
 
+  const navigate = useNavigate();
   const [selectedVariant, setSelectedVariant] = useState(
     productDetails[0].variants[0]
   );
@@ -122,11 +123,13 @@ const ProductDetails = () => {
             </div>
           </div>
           <div className="flex gap-3 items-center">
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold max-sm:text-md py-2 px-4 rounded-md cursor-pointer w-full sm:w-auto flex items-center justify-center gap-2 max-sm:h-[3.4rem]">
+            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold max-sm:text-md py-2 px-4 rounded-md cursor-pointer w-full sm:w-auto flex items-center justify-center gap-2"
+            onClick={()=>navigate('/checkout/cart')}
+            >
               <MdOutlineShoppingBasket size={20} />
               Add to Cart
             </button>
-            <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-md cursor-pointer w-full sm:w-auto flex items-center justify-center gap-2 max-sm:text-sm max-sm:h-[3.45rem]">
+            <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-md cursor-pointer w-full sm:w-auto flex items-center justify-center gap-2 max-sm:text-md">
               <FaBookmark size={18} />
               Save for later
             </button>

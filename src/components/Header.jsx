@@ -2,13 +2,18 @@ import React from "react";
 import { FaAngleDown } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
 import { FaRegHeart, FaShoppingCart } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header className="bg-white shadow-lg border-b border-gray-300">
       <div className="main-container w-[95%] mx-auto flex justify-between items-center py-4">
         {/* Left Column */}
-        <div className="left-col w-[25%] max-sm:w-full max-sm:flex max-sm:flex-col justify-center items-center">
+        <div
+          className="left-col w-[20%] max-sm:w-full max-sm:flex max-sm:flex-col justify-center items-center cursor-pointer"
+          onClick={() => navigate("/")}
+        >
           <h1 className="font-bold text-2xl tracking-wider">Faiza</h1>
           <p className="font-semibold text-sm tracking-[.3rem] text-gray-600">
             Enterprise
@@ -16,7 +21,7 @@ const Header = () => {
         </div>
 
         {/* Middle Column: Categories and Search */}
-        <div className="mid-col flex justify-between items-center gap-3 w-[40%] max-sm:hidden">
+        <div className="mid-col flex items-center gap-3 w-[40%] max-sm:hidden"> {/* Adjusted width */}
           <div className="flex items-center gap-2 text-sm">
             <h2 className="font-semibold text-gray-700 cursor-pointer">All Categories</h2>
             <FaAngleDown size={14} />
@@ -32,7 +37,7 @@ const Header = () => {
         </div>
 
         {/* Right Column: Cart, Wishlist, and Log In */}
-        <div className="right-col flex justify-end items-center gap-6 w-[35%] max-sm:hidden">
+        <div className="right-col flex justify-end items-center gap-6 w-[20%] max-sm:hidden"> {/* Adjusted width */}
           {/* Cart Icon */}
           <div className="flex justify-center items-center relative cursor-pointer">
             <div className="absolute top-[-8px] right-[-8px]">
