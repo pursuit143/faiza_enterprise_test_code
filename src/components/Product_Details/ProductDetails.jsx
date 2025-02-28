@@ -5,9 +5,8 @@ import { MdOutlineShoppingBasket } from "react-icons/md";
 import { FaBookmark } from "react-icons/fa6";
 import { FaShippingFast } from "react-icons/fa";
 import { TbTruckReturn } from "react-icons/tb";
-import { IoIosArrowDroprightCircle } from "react-icons/io";
 const ProductDetails = () => {
-  const productDetails = [
+  const [productDetails, setProductDetails] = useState([
     {
       id: 1,
       brand: "ITC",
@@ -48,7 +47,7 @@ const ProductDetails = () => {
         },
       ],
     },
-  ];
+  ]);
 
   const navigate = useNavigate();
   const [selectedVariant, setSelectedVariant] = useState(
@@ -123,9 +122,9 @@ const ProductDetails = () => {
             </div>
           </div>
           <div className="flex gap-3 items-center max-sm:flex-col">
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md cursor-pointer w-full sm:w-auto flex items-center justify-center gap-2"
-            onClick={()=>navigate('/checkout/cart')}
-            >
+            <button
+              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md cursor-pointer w-full sm:w-auto flex items-center justify-center gap-2"
+              onClick={() => navigate("/checkout/cart")}>
               <MdOutlineShoppingBasket size={20} />
               Add to Cart
             </button>
@@ -373,7 +372,16 @@ const ProductDetails = () => {
           Description
         </h2>
         <p className="text-sm sm:text-base mb-2 text-pretty">
-        Green capsicum, known as bell pepper, is a versatile vegetable widely used in Indian cuisine. Its crisp texture and mild, slightly bitter flavour make it a favourite in curries, stir-fries, and salads across the country. In dishes like Paneer Tikka or Mixed Vegetable Sabzi, diced capsicum adds colour and enhances the overall taste. It is also a key ingredient in Indo-Chinese dishes like chilli paneer or vegetable Manchurian, where its crunchiness complements spicy sauces. Grown in various regions of India, green capsicum's popularity highlights its integration into both traditional and modern Indian cooking, prized for its culinary adaptability.
+          Green capsicum, known as bell pepper, is a versatile vegetable widely
+          used in Indian cuisine. Its crisp texture and mild, slightly bitter
+          flavour make it a favourite in curries, stir-fries, and salads across
+          the country. In dishes like Paneer Tikka or Mixed Vegetable Sabzi,
+          diced capsicum adds colour and enhances the overall taste. It is also
+          a key ingredient in Indo-Chinese dishes like chilli paneer or
+          vegetable Manchurian, where its crunchiness complements spicy sauces.
+          Grown in various regions of India, green capsicum's popularity
+          highlights its integration into both traditional and modern Indian
+          cooking, prized for its culinary adaptability.
         </p>
       </div>
     </div>
