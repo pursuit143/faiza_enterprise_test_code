@@ -122,14 +122,14 @@ const ProductDetails = () => {
               </button>
             </div>
           </div>
-          <div className="flex gap-3 items-center">
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold max-sm:text-md py-2 px-4 rounded-md cursor-pointer w-full sm:w-auto flex items-center justify-center gap-2"
+          <div className="flex gap-3 items-center max-sm:flex-col">
+            <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md cursor-pointer w-full sm:w-auto flex items-center justify-center gap-2"
             onClick={()=>navigate('/checkout/cart')}
             >
               <MdOutlineShoppingBasket size={20} />
               Add to Cart
             </button>
-            <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-md cursor-pointer w-full sm:w-auto flex items-center justify-center gap-2 max-sm:text-md">
+            <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-md cursor-pointer w-full sm:w-auto flex items-center justify-center gap-2 ">
               <FaBookmark size={18} />
               Save for later
             </button>
