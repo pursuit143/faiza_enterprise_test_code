@@ -1,6 +1,8 @@
 import React from "react";
 
-const ProductCard = ({ tag }) => {
+const ProductCard = ({ data }) => {
+  if(!data) return null;
+  const tag = data.tag;
   const getTagStyle = (tag) => {
     switch (tag) {
       case "sale":
@@ -27,22 +29,22 @@ const ProductCard = ({ tag }) => {
       <div className="w-[80%] mx-auto p-2">
         <img
           className="mb-2 w-full"
-          src="https://www.jiomart.com/images/product/original/492577703/aashirvaad-svasti-select-thick-tasty-pasteurized-toned-milk-500-ml-product-images-o492577703-p607295729-0-202401111358.jpg?im=Resize=(420,420)"
+          src={data.image}
           alt="Product"
         />
       </div>
-      <p className="text-sm text-gray-500">Milk</p>
+      <p className="text-sm text-gray-500 capitalize">{data.category}</p>
       <h3 className="font-semibold text-sm mb-1 line-clamp-2">
-        Seeds of Change Organic Quinoa
+        {data.name}
       </h3>
-      <p className="text-xs text-gray-500">By Ashirvaad</p>
+      <p className="text-xs text-gray-500 capitalize">{`By ${data.brand}`}</p>
       <div className="flex items-center justify-between mt-2">
         <div>
           <h4 className="font-semibold text-lg text-green-700">
-            <span>&#8377;</span>135.00
+            <span>&#8377;</span>{data.price}
           </h4>
           <h4 className="text-sm line-through text-gray-400">
-            <span>&#8377;</span>37.00
+            <span>&#8377;</span>{data.mrp}
           </h4>
         </div>
         <button className="py-2 px-3 bg-emerald-200 text-green-900 font-bold rounded-lg text-[.6rem] hover:bg-emerald-400 transition cursor-pointer max-sm:text-[.6rem] max-sm:mt-5">
